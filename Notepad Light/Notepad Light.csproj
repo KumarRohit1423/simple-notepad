@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <RootNamespace>Notepad_Light</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyVersion>1.0.0.61</AssemblyVersion>
+    <FileVersion>1.0.0.61</FileVersion>
+    <PackageIcon>TextFile_white_16x.png</PackageIcon>
+    <StartupObject>Notepad_Light.Program</StartupObject>
+    <ApplicationIcon>RichTextBox_16x.ico</ApplicationIcon>
+    <PackageProjectUrl>https://github.com/KumarRohit1423/simple-notepad</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/KumarRohit1423/simple-notepad</RepositoryUrl>
+    <Description>C# Notepad application for taking notes.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="RichTextBox_16x.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Markdig" Version="0.37.0" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2470-prerelease" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
